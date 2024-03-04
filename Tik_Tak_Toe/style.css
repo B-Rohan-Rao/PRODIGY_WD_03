@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.anta-regular {
+    font-family: "Anta", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background-image: linear-gradient(rgb(235, 223, 240), rgb(211, 169, 239));
+}
+
+nav{
+
+    color:rgb(22, 22, 21);
+    height: 90px;
+    font-size: 32px;
+    display: flex;
+    padding:0 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+
+}
+
+nav ul{
+    list-style: none;
+}
+nav, nav a {
+    font-family: "Anta", sans-serif;
+}
+
+.gameContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.container{
+    padding: 40px;
+    display: grid;
+    grid-template-rows: repeat(3,10vw);
+    grid-template-columns: repeat(3,10vw);
+    font-family: "Anta", sans-serif;
+    position: relative;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 6vw;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: background-color 0.5s ease; 
+}
+
+.box:hover {
+    background-color: rgba(230, 161, 224, 0.7); /* Adjust the color and transparency as needed */
+    box-shadow: 0 0 10px black;
+}    
+
+.animate-once .box {
+    animation: glowAnimation 1.5s;
+    animation-iteration-count: 1;
+  }
+
+  @keyframes glowAnimation {
+    0% {
+      box-shadow: 0 0 10px rgb(32, 32, 32);
+    }
+    25% {
+      box-shadow: 0 0 20px rgb(32, 32, 32);
+    }
+    50% {
+      box-shadow: 0 0 30px rgb(32, 32, 32);
+    }
+    75% {
+      box-shadow: 0 0 20px rgb(46, 45, 46);
+    }
+    100% {
+      box-shadow: 0 0 10px rgb(49, 48, 49);
+    }
+  }
+
+  .box:nth-child(1) {
+    animation-delay: 0.1s;
+  }
+  .box:nth-child(2) {
+    animation-delay: 0.2s;
+  }
+  .box:nth-child(3) {
+    animation-delay: 0.3s;
+  }
+  .box:nth-child(4) {
+    animation-delay: 0.4s;
+  }
+  .box:nth-child(5) {
+    animation-delay: 0.5s;
+  }
+  .box:nth-child(6) {
+    animation-delay: 0.6s
+  }
+  .box:nth-child(7) {
+    animation-delay: 0.7s;
+  }
+  .box:nth-child(8) {
+    animation-delay: 0.8s;
+  }
+  .box:nth-child(9) {
+    animation-delay: 0.9s;
+  }
+
+.info{
+    font-size: 20px;
+}
+
+.gameInfo{
+    padding: 34px;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+}
+.gameInfo h1{
+    font-size: 2rem;
+}
+
+.br-0{
+    border-right: 0;
+}
+.bl-0{
+    border-left: 0;
+}
+.bt-0{
+    border-top: 0;
+}
+.bb-0{
+    border-bottom: 0;
+}
+
+#reset{
+    margin: 0 23px;
+    padding:6px 14px;
+    background-color:rgba(230, 161, 224, 0.7);
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: "Nunito", sans-serif;
+    font-weight: bolder;
+}
+
+
+
+@media screen and (max-width: 750px){
+    .gameContainer{ 
+        flex-wrap: wrap;
+    }
+    .gameInfo{
+        margin-top: 30px;
+    }
+}
